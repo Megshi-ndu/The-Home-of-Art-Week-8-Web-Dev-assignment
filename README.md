@@ -40,8 +40,8 @@ This project showcases animations, interactivity, and modern design best practic
 
 ## 📂 Project Structure
 
-Here is the link to the live URL:
+Here is the link to the live URL link:
 
-https://megshi-ndu.github.io/the-home-of-art/
+https://megshi-ndu.github.io/The-Home-of-Art-Week-8-Web-Dev-assignment/
 
 

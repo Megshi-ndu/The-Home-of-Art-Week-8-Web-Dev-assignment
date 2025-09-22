@@ -1,0 +1,242 @@
+/* Global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #9c9a0780;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Header */
+header {
+  background: #011f09;
+  color: #fff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideIn 0.7s ease-out;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+.nav-links li a:hover {
+  color: #ff9800;
+  transform: scale(1.1);
+}
+
+/* Hero */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  animation: fadeIn 1s ease-in;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: pulse 3s infinite;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.slides img {
+  width: 100%;
+  display: none;
+  animation: fadeIn 1s ease-in;
+}
+.slides img.active {
+  display: block;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.prev:hover, .next:hover {
+  background: #ff9800;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  animation: fadeIn 1s ease-in;
+}
+form input, form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+form input:focus, form textarea:focus {
+  border: 2px solid #ff9800;
+  box-shadow: 0 0 10px rgba(255,152,0,0.4);
+  outline: none;
+}
+form button {
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, 
+  background 0.3s;
+}
+form button:hover {
+  background: #ff9800;
+  transform: scale(1.05);
+}
+
+/* Scroll to top button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background 0.3s, transform 0.3s;
+}
+#scrollTopBtn:hover {
+  background: #333;
+  transform: scale(1.1);
+}
+/* Typing animation effect */
+#typingText {
+  font-size: 2.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff; /* blinking cursor */
+  display: inline-block;
+  animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 50% { border-color: transparent; }
+  51%, 100% { border-color: #fff; }
+}
+
+/* Dark mode cursor color */
+body.dark-mode #typingText {
+  border-right: 3px solid #ff9800;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #990a7a;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode header {
+  background: #1f1f1f;
+}
+body.dark-mode .nav-links li a {
+  color: #e0e0e0;
+}
+body.dark-mode .nav-links li a:hover {
+  color: #ff9800;
+}
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #333333, #555555);
+}
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background: #1f1f1f;
+  color: #e0e0e0;
+  border: 2px solid #555;
+}
+body.dark-mode form input:focus,
+body.dark-mode form textarea:focus {
+  border: 2px solid #ff9800;
+  box-shadow: 0 0 10px rgba(255,152,0,0.4);
+}
+body.dark-mode form button {
+  background: #ff9800;
+  color: #121212;
+}
+body.dark-mode form button:hover {
+  background: #e68a00;
+}
+body.dark-mode footer {
+  background: #1f1f1f;
+}
+/* Form button */
+form button {
+  padding: 10px;
+  background: #333;
+}
+

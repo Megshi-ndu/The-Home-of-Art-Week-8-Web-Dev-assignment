@@ -44,4 +44,6 @@ Here is the link to the live URL link:
 
 https://megshi-ndu.github.io/The-Home-of-Art-Week-8-Web-Dev-assignment/
 
+https://artbymeg.netlify.app/
+
 

@@ -40,3 +40,8 @@ This project showcases animations, interactivity, and modern design best practic
 
 ## 📂 Project Structure
 
+Here is the link to the live URL:
+
+https://megshi-ndu.github.io/the-home-of-art/
+
+
